@@ -93,5 +93,22 @@ namespace TDSTecnologia.FaceAlbum.Web.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult Detalhe(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var album = _context.Albuns.FirstOrDefault(m => m.AlbumId == id);
+            if (album == null)
+            {
+                return NotFound();
+            }
+
+            return View(album);
+        }
+
     }
 }
