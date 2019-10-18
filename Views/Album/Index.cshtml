@@ -30,7 +30,8 @@
                     @Html.DisplayFor(modelItem => item.DataInicio)
                 </td>
                 <td>
-                    <a asp-action="Alterar" asp-route-id="@item.AlbumId" class="btn btn-sm btn-warning">Atualizar</a>
+                    <a asp-action="Alterar" asp-route-id="@item.AlbumId" class="btn btn-sm btn-warning">Atualizar</a> |
+                    <a asp-action="Detalhe" asp-route-id="@item.AlbumId" class="btn btn-sm btn-primary">Fotos</a> |
                 </td>
                 
             </tr>
