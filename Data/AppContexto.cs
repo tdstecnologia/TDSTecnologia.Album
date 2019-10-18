@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TDSTecnologia.FaceAlbum.Web.Models;
 
 namespace TDSTecnologia.FaceAlbum.Web.Data
 {
@@ -7,5 +8,7 @@ namespace TDSTecnologia.FaceAlbum.Web.Data
         public AppContexto(DbContextOptions<AppContexto> opcoes) : base(opcoes)
         {
         }
+
+        public DbSet<Album> Albuns { get; set; }
     }
 }
