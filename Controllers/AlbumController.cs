@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TDSTecnologia.FaceAlbum.Web.Data;
 using TDSTecnologia.FaceAlbum.Web.Models;
 
 namespace TDSTecnologia.FaceAlbum.Web.Controllers
 {
     public class AlbumController : Controller
     {
+        private readonly AppContexto _context;
+
+        public AlbumController(AppContexto context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
