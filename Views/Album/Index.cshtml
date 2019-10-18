@@ -14,19 +14,26 @@
                 <th>
                     Data
                 </th>
+                <th>
+                    Ações
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Titulo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataInicio)
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataInicio)
+                </td>
+                <td>
+                    <a asp-action="Alterar" asp-route-id="@item.AlbumId" class="btn btn-sm btn-warning">Atualizar</a>
+                </td>
+                
+            </tr>
             }
         </tbody>
     </table>
