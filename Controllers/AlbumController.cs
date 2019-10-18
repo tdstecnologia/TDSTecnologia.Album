@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using TDSTecnologia.FaceAlbum.Web.Data;
 using TDSTecnologia.FaceAlbum.Web.Models;
 
@@ -15,7 +16,7 @@ namespace TDSTecnologia.FaceAlbum.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_context.Albuns.ToList());
         }
 
         [HttpGet]
