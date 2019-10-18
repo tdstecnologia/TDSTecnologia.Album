@@ -29,6 +29,8 @@ namespace TDSTecnologia.FaceAlbum.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                _context.Add(album);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(album);
